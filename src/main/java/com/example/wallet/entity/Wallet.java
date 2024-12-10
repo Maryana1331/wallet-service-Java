@@ -10,6 +10,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class Wallet {
+
     @Id
     private UUID id;
 

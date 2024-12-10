@@ -13,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.UUID;
 
 @Getter
@@ -114,9 +113,4 @@ public class WalletServiceImpl implements WalletService {
         return new WalletOperationResponse(wallet.getId(), wallet.getBalance());
     }
 
-    public long getBalance(UUID walletId) {
-        return walletRepository.findById(walletId)
-                .orElseThrow(() -> new WalletTransferException(ErrorCodes.WALLET_NOT_FOUND.getDescription()))
-                .getBalance();
-    }
 }

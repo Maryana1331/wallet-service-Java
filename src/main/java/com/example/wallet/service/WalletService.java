@@ -12,9 +12,9 @@ public interface WalletService {
 
     WalletOperationResponse updateWallet(WalletOperationRequest walletOperationRequest);
 
-    void deleteWallet(UUID walletId); // Изменен на void, так как метод не должен возвращать значение
+    void deleteWallet(UUID walletId);
 
-    WalletOperationResponse getWallet(UUID walletId); // Переименован для соответствия с реализацией
+    WalletOperationResponse getWallet(UUID walletId);
 
     WalletOperationResponse performOperation(WalletOperationRequest walletOperationRequest);
 

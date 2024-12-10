@@ -46,7 +46,8 @@ class WalletControllerTest {
         walletOperationRequest = new WalletOperationRequest("CREATE", UUID.randomUUID(), 100L);
         transferRequest = new TransferRequest(UUID.fromString("123e4567-e89b-12d3-a456-426614174000"),
                 UUID.fromString("123e4567-e89b-12d3-a456-426614174001"), 1L);
-        walletOperationResponse = new WalletOperationResponse(UUID.fromString("123e4567-e89b-12d3-a456-426614174000"), 100L);
+        walletOperationResponse = new WalletOperationResponse(UUID.fromString(
+                "123e4567-e89b-12d3-a456-426614174000"), 100L);
         customSuccessResponse = new CustomSuccessResponse<>("Transfer successful");
     }
 
