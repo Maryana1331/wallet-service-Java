@@ -2,21 +2,22 @@ package com.example.wallet.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NonNull;
 import lombok.Setter;
-import java.util.UUID;
+import org.springframework.lang.NonNull;
 import javax.validation.constraints.Positive;
+import java.util.UUID;
 
 @Getter
 @Setter
 @AllArgsConstructor
-public class WalletOperationRequest {
+public class TransferRequest {
 
-    private String operationType;
+    private UUID fromWalletId;
 
-    private UUID walletId;
+    private UUID toWalletId;
 
     @NonNull
     @Positive(message = "Сумма должна быть неотрицательной")
     private Long amount;
+
 }
